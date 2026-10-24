@@ -122,6 +122,11 @@
     box-shadow: 0 18px 40px -20px #000c;
   }
   .band img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .band.kit { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 6px; background: #0f220c; }
+  @media (max-width: 640px) {
+    .band.kit { grid-template-columns: 1fr 1fr; grid-template-rows: 3fr 2fr; height: 420px; }
+    .band.kit img:first-child { grid-column: 1 / -1; }
+  }
   .band figcaption {
     position: absolute; left: 0; right: 0; bottom: 0;
     padding: 40px 22px 16px;
@@ -158,8 +163,10 @@
 <main>
   <ol class="grid" data-from="1" data-to="14"></ol>
 
-  <figure class="band">
-    <img src="images/kit.jpg" alt="A cricket kit bag with a bat, pads, batting gloves and a red ball on the pitch" loading="lazy" style="object-position: 50% 55%">
+  <figure class="band kit">
+    <img src="images/batball.jpg" alt="A new cricket bat with a shiny red leather ball" loading="lazy" style="object-position: 60% 50%">
+    <img src="images/helmet.jpg" alt="A navy cricket helmet resting on the grass by the boundary rope" loading="lazy">
+    <img src="images/balls.jpg" alt="A box of new red cricket balls at the ground" loading="lazy" style="object-position: 50% 75%">
     <figcaption>Kit packed, bat oiled, ball shined — always game.</figcaption>
   </figure>
 
@@ -181,11 +188,14 @@
   <footer>
     <p class="love">With love, always.</p>
     <p class="credits">
-      Photos by Acabashi via Wikimedia Commons, licensed
-      <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>:
+      Photos via Wikimedia Commons:
       <a href="https://commons.wikimedia.org/wiki/File:Great_Canfield_Cricket_Club_pitch_and_stumps_Essex_England_01.jpg">Great Canfield Cricket Club</a>,
-      <a href="https://commons.wikimedia.org/wiki/File:Cricket_kit_bag_at_North_London_Cricket_Club_01.jpg">cricket kit bag</a>,
-      <a href="https://commons.wikimedia.org/wiki/File:High_Roding_Cricket_Club_pitch_and_stumps_01.jpg">High Roding Cricket Club</a>.
+      <a href="https://commons.wikimedia.org/wiki/File:High_Roding_Cricket_Club_pitch_and_stumps_01.jpg">High Roding Cricket Club</a> and
+      <a href="https://commons.wikimedia.org/wiki/File:Cricket_helmet_at_Fenner%27s_Field_ground,_Cambridge_University_Cricket_Club,_England_01.jpg">cricket helmet</a> by Acabashi;
+      <a href="https://commons.wikimedia.org/wiki/File:Wolfer_Supreme_County.jpg">cricket balls</a> by WolferSports
+      (all <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>);
+      <a href="https://commons.wikimedia.org/wiki/File:GandM_Flare_DXM_bat-Purist_156g_ball.jpg">bat and ball</a> by Marie-Lan Nguyen
+      (<a href="https://creativecommons.org/licenses/by/2.5/">CC BY 2.5</a>).
     </p>
   </footer>
 </main>
